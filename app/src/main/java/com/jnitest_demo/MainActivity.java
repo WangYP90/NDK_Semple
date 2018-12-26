@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         String split_path = path+ "timg.jpeg";
         String split_text = path+ "timg_%d.jpeg";
-        String manage_finish_path = "";
+        String manage_finish_path = path+"timg_meage.jpeg";
         int split_count = 5;
         switch (view.getId()) {
             case R.id.m_btn_crypt:
@@ -65,8 +65,6 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.m_btn_split:
-
-
                 try{
                     WYPFileManage.splitFile(split_path, split_count,split_text);
                 }catch (Throwable e){
@@ -76,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.m_btn_merge:
 
                 try{
-                    WYPFileManage.mergeFile(split_text,manage_finish_path);
+                    WYPFileManage.mergeFile(split_text,split_count,manage_finish_path);
                 }catch (Throwable e){
                     e.printStackTrace();
                 }

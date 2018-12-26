@@ -13,6 +13,6 @@ public class CryptorUtil {
     public native static void decrypt(String crypt_path,String decrypt_path);
 
     static{
-        System.loadLibrary("test-ndk");
+        System.loadLibrary("file-manage");
     }
 }

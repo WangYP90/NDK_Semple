@@ -21,7 +21,7 @@ JNIEXPORT void JNICALL Java_com_jnitest_1demo_WYPFileManage_splitFile
  * Signature: (Ljava/lang/String;Ljava/lang/String;)V
  */
 JNIEXPORT void JNICALL Java_com_jnitest_1demo_WYPFileManage_mergeFile
-  (JNIEnv *, jclass, jstring, jstring);
+  (JNIEnv *, jclass, jstring,jint, jstring);
 
 #ifdef __cplusplus
 }
