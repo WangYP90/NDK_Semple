@@ -1,1 +1,1 @@
-include ':app'
+include ':app', ':testjni_01', ':voicer_change'
