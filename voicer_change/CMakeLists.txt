@@ -33,14 +33,23 @@ include_directories(scr/main/cpp/inc)
 add_library(fmod SHARED IMPORTED)
 add_library(fmodL SHARED IMPORTED)
 #2.添加库的路径
-if(${ANDROID_ABI} STREQUAL "armeabi")
-set_target_properties(fmod
-        PROPERTIES IMPORTED_LOCATION
-        ${CMAKE_SOURCE_DIR}/src/main/jniLibs/armeabi/libfmod.so)
-set_target_properties(fmodL
-        PROPERTIES IMPORTED_LOCATION
-        ${CMAKE_SOURCE_DIR}/src/main/jniLibs/armeabi/libfmodL.so)
-endif(${ANDROID_ABI} STREQUAL "armeabi")
+if (${ANDROID_ABI} STREQUAL "armeabi")
+    set_target_properties(fmod
+            PROPERTIES IMPORTED_LOCATION
+            ${CMAKE_SOURCE_DIR}/src/main/jniLibs/armeabi/libfmod.so)
+    set_target_properties(fmodL
+            PROPERTIES IMPORTED_LOCATION
+            ${CMAKE_SOURCE_DIR}/src/main/jniLibs/armeabi/libfmodL.so)
+endif (${ANDROID_ABI} STREQUAL "armeabi")
+
+if (${ANDROID_ABI} STREQUAL "armeabi-v7a")
+    set_target_properties(fmod
+            PROPERTIES IMPORTED_LOCATION
+            ${CMAKE_SOURCE_DIR}/src/main/jniLibs/armeabi-v7a/libfmod.so)
+    set_target_properties(fmodL
+            PROPERTIES IMPORTED_LOCATION
+            ${CMAKE_SOURCE_DIR}/src/main/jniLibs/armeabi-v7a/libfmodL.so)
+endif (${ANDROID_ABI} STREQUAL "armeabi-v7a")
 
 # Searches for a specified prebuilt library and stores the path as a
 # variable. Because CMake includes system libraries in the search path by

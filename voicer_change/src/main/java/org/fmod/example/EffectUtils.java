@@ -19,8 +19,8 @@ public class EffectUtils {
 	public native static void fix(String path, int type);
 
 	static {
-		System.loadLibrary("fmodL");
 		System.loadLibrary("fmod");
+		System.loadLibrary("fmodL");
 		System.loadLibrary("qq_voicer");
 	}
 

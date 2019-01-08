@@ -12,7 +12,7 @@ android {
         externalNativeBuild {
             cmake {
                 cppFlags "-std=c++11"
-                abiFilters "armeabi"//需要什么构架的so，就在这边添加即可
+                abiFilters "armeabi","armeabi-v7a"//需要什么构架的so，就在这边添加即可
             }
         }
         ndk {
